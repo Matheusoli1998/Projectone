@@ -5,15 +5,11 @@ body {
 }
 
 header {
-    display: block;
+    display: flex;
     background-color: black;
-   padding: 30px; 
+    padding: 30px;
 }
-.background {
-   position: absolute;
-    width: 100%;
-    height: 100%;
-}
+
 .logo {
     display: block;
     float: left;
@@ -24,7 +20,7 @@ header {
 nav ul {
     display: flex;
     list-style-type: none;
-    padding: 0;
+    padding: 5px;
 }
 
 nav ul li a {
@@ -41,21 +37,38 @@ nav ul li a:hover {
 main {
     display: grid;
     padding: 300px;
-    background-color: aqua;
+    position: absolute;
+    z-index: 1;
+    grid-area: auto;
 }
 
-section {
+aside .tittle{
+    display: grid;
+    background-color: gray;
+    color: white;
+  
+    z-index: 1;
+
+    margin-top: calc(100vh - 50px);
+    grid-row: 400vh;
+}
+section.background {
     position: absolute;
     width: max-content;
     display: block;
     margin-bottom: 20px;
     padding: 10px;
     background-color: white;
+    z-index: -1;
 }
 
 footer {
+    display: grid;
     background-color: gray;
     color: white;
     padding: 10px;
     text-align: center;
+    min-height: 50px;
+    margin-top: calc(100vh - 50px);
+    grid-row: 400vh;
 }
